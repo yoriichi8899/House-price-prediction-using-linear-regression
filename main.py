@@ -20,7 +20,14 @@ model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 
+plt.scatter(df['bedrooms'], df['price'])
+plt.xlabel("Number of rooms")
+plt.ylabel("Price of the house in $(thousand)")
+plt.title("Price of the house based on the number of rooms")
+plt.show()
+
 
 sample_house = X.iloc[0:1]
 predicted_price =  model.predict(sample_house)
+
 print("Predicted House Price: ", predicted_price[0])
